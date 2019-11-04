@@ -1,3 +1,9 @@
 $red: #d9230f;
 
+.logo-suffix {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: $red;
+}
+
 @import "~bulma/bulma";
