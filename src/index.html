@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="SinusBot Installer which supports Debian, Ubuntu, CentOS and installs the SinusBot with only a single command.">
+    <title>SinusBot Installer</title>
+    <link rel="stylesheet" href="styles.scss">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://bulma.io">
+                    <img src="logo.png" width="112" height="28">
+                </a>
+
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="https://www.sinusbot.com" target="_blank">
+                        SinusBot
+                    </a>
+                    <a class="navbar-item" href="https://sinusbot.github.io/docs/" target="_blank">
+                        Documentation
+                    </a>
+                    <a class="navbar-item" href="https://github.com/SinusBot/installer-linux" target="_blank">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="box">
+            <div class="content">
+                <h1>Installation</h1>
+                <div class="field has-addons">
+                    <div class="control has-icons-right is-expanded">
+                        <input id="copy-input" type="text" class="input is-info is-large"
+                            value="bash <(wget --no-check-certificate -O - 'https://raw.githubusercontent.com/SinusBot/installer-linux/master/sinusbot_installer.sh')"
+                            readonly>
+                    </div>
+                    <div class="control">
+                        <a class="button is-danger is-large" id="copy-btn" data-clipboard-target="#copy-input">Copy to
+                            Clipboard</a>
+                    </div>
+                </div>
+                <p>Alternatively download the install <a
+                        href="https://raw.githubusercontent.com/SinusBot/installer-linux/master/sinusbot_installer.sh"
+                        target="_blank">here</a> script manually</p>.
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2>Information</h2>
+                <p>For Debian 8+, CentOS 7+, Ubuntu 16.10+</p>
+
+                <p>The installer does the following:</p>
+                <ul>
+                    <li>install latest beta bot</li>
+                    <li>install latest TS3 client</li>
+                    <li>install all necessary aptitudes</li>
+                    <li>create seperate sinusbot user</li>
+                    <li>install YT-Dl (optional)</li>
+                    <li>cronjob for daily YT-Dl update and Sinusbot (once supported)</li>
+                    <li>change file permissions</li>
+                    <li>generate systemd file => start/stop with "service sinusbot {start|etc}"</li>
+                    <li>delete unneeded files and archives</li>
+                    <li>starts sinusbot after installation</li>
+                    <li>option to update and remove the bot</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

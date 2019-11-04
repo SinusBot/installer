@@ -1,0 +1,19 @@
+{
+  "name": "installer",
+  "version": "1.0.0",
+  "description": "SinusBot installer docs",
+  "repository": "https://github.com/SinusBot/installer.git",
+  "author": "Max Schmitt <max@schmitt.mx>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "dependencies": {
+    "bulma": "^0.8.0",
+    "clipboard": "^2.0.4"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.3"
+  }
+}
