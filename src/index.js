@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   clipboard.on('success', function (e) {
     toast({
       message: "Copied command to clipboard!",
-      type: "is-success",
+      type: "is-danger",
       position: "bottom-center"
     })
   });
