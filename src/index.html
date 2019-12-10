@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description"
-        content="SinusBot Installer which supports Debian, Ubuntu, CentOS and installs the SinusBot with only a single command.">
+        content="SinusBot Installer for Debian, Ubuntu and CentOS - Installs the SinusBot with a single command.">
     <title>SinusBot Installer</title>
     <link rel="stylesheet" href="styles.scss">
     <link rel="shortcut icon" href="https://sinusbot.github.io/favicon.ico">
@@ -17,7 +17,7 @@
         <nav class="navbar" aria-label="main navigation">
             <div class="navbar-brand">
                 <div class="navbar-item">
-                    <img src="logo.png" alt="SinusBot logo" width="112" height="28">
+                    <img src="logo.png" alt="SinusBot" width="112" height="28">
                     <span class="logo-suffix">Installer</span>
                 </div>
 
@@ -45,7 +45,7 @@
         </nav>
         <div class="box">
             <div class="content">
-                <h1>Installation</h1>
+                <h2>Installation</h2>
                 <div class="field has-addons">
                     <div class="control is-expanded">
                         <input id="copy-input" type="text" class="input is-info is-medium"
@@ -64,35 +64,54 @@
                         </a>
                     </div>
                 </div>
-                <p>Alternatively download the install <a
+                <p>Alternatively you can download the installer script <a
                         href="https://raw.githubusercontent.com/SinusBot/installer-linux/master/sinusbot_installer.sh"
-                        target="_blank">here</a> script manually.</p>
-            </div>
-        </div>
-        <div class="box">
-            <div class="content">
-                <h2>Information</h2>
-                <p>For Debian 8+, CentOS 7+, Ubuntu 16.10+</p>
-
+                        target="_blank">here</a> or follow our <a
+                        href="https://sinusbot.github.io/docs/installation/linux/#manual-installation"
+                        target="_blank">manual installation guide</a>.
+                </p>
+                
                 <p>The installer does the following:</p>
                 <ul>
-                    <li>install latest beta bot</li>
-                    <li>install latest TS3 client</li>
-                    <li>install all necessary aptitudes</li>
-                    <li>create seperate sinusbot user</li>
-                    <li>install YT-Dl (optional)</li>
-                    <li>cronjob for daily YT-Dl update and Sinusbot (once supported)</li>
-                    <li>change file permissions</li>
-                    <li>generate systemd file => start/stop with "service sinusbot {start|etc}"</li>
-                    <li>delete unneeded files and archives</li>
+                    <li>installs latest stable SinusBot release</li>
+                    <li>installs latest compatible TeamSpeak3 Client</li>
+                    <li>installs necessary dependencies/packages</li>
+                    <li>creates seperate sinusbot system user</li>
+                    <li>installs <a href="https://sinusbot.github.io/docs/youtube-dl/" target="_blank">youtube-dl</a> (optional)</li>
+                    <li>adds cronjob that updates youtube-dl daily</li>
+                    <li>generates <a href="https://sinusbot.github.io/docs/installation/linux/#using-a-startscript" target="_blank">systemd file</a>
+                        <ul>
+                            <li>Start SinusBot with <code>systemctl start sinusbot</code></li>
+                            <li>Stop SinusBot with <code>systemctl stop sinusbot</code></li>
+                        </ul>
+                    </li>
                     <li>starts sinusbot after installation</li>
-                    <li>option to update and remove the bot</li>
+                    <li>allows you to update or remove the SinusBot</li>
                 </ul>
             </div>
         </div>
         <div class="box">
             <div class="content">
-                <h2>Live Demo</h2>
+                <h3>Requirements</h3>
+                <p>
+                    Make sure that your OS (Operating System) is up-to-date.
+                    We recommend recent LTS releases such as Ubuntu 18.04 or Debian 10 (buster).<br>
+                    Minimal reqired versions: Debian 8+, CentOS 7+, Ubuntu 16.10+.
+                </p>
+                <p>
+                    Note: The TeamSpeak Client 3.3+ requires at least a Linux Kernel of version 3.17 or higher!<br>
+                    You can check your Linux Kernel version with <code>uname -r</code>.
+                </p>
+                <p>
+                    The server should have at least 512MB or 1GB of free RAM.
+                    Although the SinusBot itself doesn't require much RAM, the TeamSpeak Client(s) and Scripts often take up the most memory.
+                    You should also make sure that the server has enough free disk space to fit your needs.
+                </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h3>Live Demo</h3>
                 <script id="asciicast-FTVY81jzqSMnAdALvBdVWT4I7"
                     src="https://asciinema.org/a/FTVY81jzqSMnAdALvBdVWT4I7.js" async></script>
             </div>
